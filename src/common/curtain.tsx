@@ -10,19 +10,19 @@ export default function Curtain() {
       // Left panels
       gsap.to(".left-panel", {
         scaleX: 0,
-        duration: 1.2,
+        duration: 0.5,
         ease: "power4.inOut",
-        delay: 0.5,
-        stagger: { amount: 0.8, from: "end" },
+        delay: 0.3,
+        stagger: { amount: 0.3, from: "end" },
       });
 
       // Right panels
       gsap.to(".right-panel", {
         scaleX: 0,
-        duration: 1.2,
+        duration: 0.5,
         ease: "power4.inOut",
-        delay: 0.5,
-        stagger: { amount: 0.8, from: "end" },
+        delay: 0.3,
+        stagger: { amount: 0.3, from: "end" },
       });
     }, container);
 

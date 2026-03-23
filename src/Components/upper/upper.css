@@ -1,5 +1,3 @@
-
-
 .upper {
   height: 100vh;
   width: 100%;
@@ -35,9 +33,8 @@
   /* color: #d4b830; */
   -webkit-text-stroke: 1px #d4b830;
 
-  
-  font-family: "Bebas Neue" ;
-  
+  font-family: "Bebas Neue";
+
   font-size: 250px;
   font-weight: 400;
   letter-spacing: 2px;
@@ -57,9 +54,8 @@
   line-height: 0.9;
   color: #d4b830;
 
-  
   font-family: "Bebas Neue";
-  
+
   font-size: 250px;
   font-weight: 400;
   letter-spacing: 2px;
@@ -75,4 +71,8 @@
   height: 100%;
   pointer-events: none;
   z-index: 2;
+}
+
+.inline-block {
+  display: inline-block;
 }

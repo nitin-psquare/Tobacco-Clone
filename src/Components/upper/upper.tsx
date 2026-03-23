@@ -69,23 +69,50 @@ const Upper = () => {
         overwrite: "auto",
       });
     } else {
-      gsap.to([outlintTextRef.current, textRef.current], {
+      gsap.set([outlintTextRef.current, textRef.current], {
         opacity: 1,
         y: 0,
-        duration: 2,
-        delay: 0,
-        ease: "power3.out",
-        overwrite: "auto",
       });
 
       gsap.to([imageRef.current, textRef.current], {
         WebkitMaskImage: `radial-gradient(circle 200px at ${e.clientX}px ${e.clientY}px, black 40%, transparent 100%)`,
         maskImage: `radial-gradient(circle 200px at ${e.clientX}px ${e.clientY}px, black 40%, transparent 100%)`,
         duration: 2,
+        delay: 0.1,
         ease: "power2.out",
         overwrite: "auto",
       });
+
+      gsap.fromTo(
+        ".tobacco-char, .tobacco-filled-char",
+        { opacity: 0, y: -200 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          stagger: { amount: 0.5, from: "end" },
+        },
+      );
+
+      gsap.fromTo(
+        ".theatre-char, .theatre-filled-char",
+        { opacity: 0, y: -200 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          stagger: { amount: 0.5, from: "start" },
+        },
+      );
     }
+  };
+
+  const splitText = (word: string, className: string) => {
+    return word.split("").map((char, index) => (
+      <span key={index} className={`inline-block ${className}`}>
+        {char === " " ? "\u00A0" : char}
+      </span>
+    ));
   };
 
   return (
@@ -106,11 +133,14 @@ const Upper = () => {
         className="video"
       />
       <h1 className="text" ref={outlintTextRef}>
-        TOBACCO <br /> THEATRE
+        {splitText("TOBACCO", "tobacco-char")} <br />
+        {splitText("THEATRE", "theatre-char")}
       </h1>
+
       <div className="text-mask-container" ref={textRef}>
         <h1 className="text-filled">
-          TOBACCO <br /> THEATRE
+          {splitText("TOBACCO", "tobacco-filled-char")} <br />
+          {splitText("THEATRE", "theatre-filled-char")}
         </h1>
       </div>
     </div>
