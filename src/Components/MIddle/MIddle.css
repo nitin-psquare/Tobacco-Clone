@@ -21,11 +21,12 @@
 
 .middle-main-heading {
     /* font-family: BebasNeuePro, Helvetica, Arial, sans-serif; */
-     font-family: "Baskerville BT";
+     font-family: "Baskerville";
 font-size: 65.039px;
 font-weight: 700;
 line-height: 52.0312px;
 color: rgb(0, 0, 0);
+font-weight: 100;
 }
 
 .middle-main-button {
@@ -38,6 +39,12 @@ color: rgb(0, 0, 0);
     justify-content: center;
     color: purple;
 
+    font-family: "Bebas Neue Pro" ;
+    font-size: 18.5829px;
+    font-weight: 400;
+    line-height: 18.5829px;
+    color: rgb(0, 0, 0);
+    
 }
 
 .middle-main-cards {
@@ -55,5 +62,11 @@ color: rgb(0, 0, 0);
 }
 
 .middle-main-font {
-    font-family: "Helvetica Neue LT Pro";
+    font-family: "Bebas Neue";
+    font-style: none;
 }
+.italics {
+    font-style: italic;
+
+}
+

@@ -5,7 +5,10 @@ const MIddle = () => {
     <div className="middle-main">
         <div className="middle-main-header">
             <div className="middle-main-heading">
-                On stage at&nbsp;
+                <span className="italics">
+                On stage at {" "}
+                </span>
+                
                 <span className="middle-main-font">
                     TOBACCO
 
@@ -13,7 +16,7 @@ const MIddle = () => {
 
             </div>
             <div className="middle-main-button">
-                Agenda
+                AGENDA
             </div>
         </div>
 

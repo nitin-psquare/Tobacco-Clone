@@ -8,7 +8,7 @@ const Card = () => {
                 <img src={cardimage} alt="" />
         </div>
         <div className="card-title">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Lorem, ipsum dolor.
         </div>
 
     </div>
