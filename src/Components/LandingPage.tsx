@@ -4,6 +4,8 @@ const LandingPage = () => {
   return (
     <div>
         <div className="upper">
+          
+
 
         </div>
         <div className="midle">
