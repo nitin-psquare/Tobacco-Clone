@@ -38,7 +38,9 @@
   /* color: #d4b830; */
   -webkit-text-stroke: 1px #d4b830;
 
-  font-family: "Bebas Neue";
+  
+  font-family: "Bebas Neue" ;
+  font-family: "Helvetica Neue LT Pro";
   font-size: 250px;
   font-weight: 400;
   letter-spacing: 2px;
@@ -58,7 +60,9 @@
   line-height: 0.9;
   color: #d4b830;
 
+  
   font-family: "Bebas Neue";
+  font-family: "Helvetica Neue LT Pro";
   font-size: 250px;
   font-weight: 400;
   letter-spacing: 2px;

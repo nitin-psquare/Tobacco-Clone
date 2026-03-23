@@ -1,0 +1,29 @@
+.middle-card-main {
+    height: 40rem;
+    width: 47rem;
+}
+.card-image {
+    height: 90%;
+    width: 100%;
+    background-color: beige;
+}
+.card-title {
+    /* background-color: yellow; */
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 30px;
+    /* padding: 20px; */
+  font-family: "Baskerville BT";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 52.0312px;
+    color: rgb(0, 0, 0);
+}
+
+.card-image img {
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,59 @@
+.middle-main{
+    
+    width: 100%;
+    background-color: #e6acce;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+
+.middle-main-header {
+    width: 90%;
+    /* background-color: yellow; */
+    display: flex;
+    padding-top: 9rem;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    padding-bottom: 1rem;
+}
+
+.middle-main-heading {
+    /* font-family: BebasNeuePro, Helvetica, Arial, sans-serif; */
+     font-family: "Baskerville BT";
+font-size: 65.039px;
+font-weight: 700;
+line-height: 52.0312px;
+color: rgb(0, 0, 0);
+}
+
+.middle-main-button {
+    background-color: white;
+    border-radius: 40px;
+    width: 7rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: purple;
+
+}
+
+.middle-main-cards {
+    width: 90%;
+    /* padding: 2rem; */
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* gap: 1rem; */
+    padding-top: 3rem;
+    /* overflow: scroll; */
+    height: 100%;
+}
+
+.middle-main-font {
+    font-family: "Helvetica Neue LT Pro";
+}

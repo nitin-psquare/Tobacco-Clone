@@ -1,4 +1,5 @@
-import Upper from "./upper/upper";
+import MIddle from "./MIddle/MIddle";
+import Upper from "./upper/Upper";
 
 const LandingPage = () => {
   return (
@@ -6,7 +7,9 @@ const LandingPage = () => {
       <div className="upper">
         <Upper />
       </div>
-      <div className="midle"></div>
+      <div className="midle">
+        <MIddle />
+      </div>
       <div className="lower"></div>
     </div>
   );

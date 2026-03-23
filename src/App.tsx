@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "./Components/LandingPage";
-
+import "./App.css"
 const App = () => {
   return (
     <div>
