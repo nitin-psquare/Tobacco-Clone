@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "myfont";
+  src: url("../../assets/HelveticaNeuePro-Regular(1).woff2") format("woff2");
+}
+
+.upper {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.upper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  -webkit-mask-image: radial-gradient(
+    circle 0px at 50% 50%,
+    black 40%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    circle 0px at 50% 50%,
+    black 40%,
+    transparent 100%
+  );
+}
+
+.text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  line-height: 0.9;
+  /* color: #d4b830; */
+  -webkit-text-stroke: 1px #d4b830;
+
+  font-family: "Bebas Neue";
+  font-size: 250px;
+  font-weight: 400;
+  letter-spacing: 2px;
+
+  /* Stop the text from blocking your spotlight hover effects */
+  pointer-events: none;
+  color: transparent;
+}
+
+.text-filled {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  line-height: 0.9;
+  color: #d4b830;
+
+  font-family: "Bebas Neue";
+  font-size: 250px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.text-mask-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
