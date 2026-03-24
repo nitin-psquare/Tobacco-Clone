@@ -51,7 +51,23 @@
 }
 
 .middle-2-tagline {
-    width: 50%;
-    background-color: red;
+    width: 65%;
+    /* background-color: red; */
+    height: 13rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    font-style: italic;
 
+}
+
+.bold-font {
+    font-family: "Bebas Neue";
+    font-size: 50px;
+    font-weight: 400;
+    /* line-height: 52.0312px; */
+    color: rgb(0, 0, 0);
+    font-style: normal;    
 }

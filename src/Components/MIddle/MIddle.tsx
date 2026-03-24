@@ -16,7 +16,7 @@ const MIddle = () => {
 
             </div>
             <div className="middle-main-button">
-                AGENDA
+                    AGENDA
             </div>
         </div>
 
