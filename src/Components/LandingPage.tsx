@@ -2,6 +2,8 @@ import Upper from "./upper/upper";
 import Curtain from "../common/curtain";
 import MIddle from "./MIddle/MIddle";
 import Middle2 from "./Middle2/MIddle2";
+import FaceIcon from "./ui/FaceIcon";
+
 const LandingPage = () => {
   return (
     <div>
@@ -16,6 +18,10 @@ const LandingPage = () => {
       </div>  
       <div className="lower">
 
+
+      </div>
+      <div className="lower">
+              <FaceIcon />
 
       </div>
     </div>
