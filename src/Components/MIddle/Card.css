@@ -1,44 +1,43 @@
 .middle-card-main {
-    height: 50rem;
-    width: 47rem;
+    height: 46rem;
+    width: 47.7rem;
 }
 
 .card-image {
-    height: 80%;
-    width: 100%;
-    background-color: beige;
-    overflow: hidden;
-    transition: all 0.5s ease;
+  height: 80%;
+  width: 100%;
+  background-color: beige;
+  overflow: hidden;
+  transition: all 0.5s ease;
 }
 .card-title {
-    /* background-color: yellow; */
-    width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    font-size: 30px;
-    /* padding: 20px; */
+  /* background-color: yellow; */
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 30px;
+  /* padding: 20px; */
   font-family: "Baskerville BT";
   font-family: "Bebas Neue";
-    font-size: 50px;
-    font-weight: 400;
-    /* line-height: 52.0312px; */
-    color: rgb(0, 0, 0);
-    padding-top: 20px;
+  font-size: 50px;
+  font-weight: 400;
+  /* line-height: 52.0312px; */
+  color: rgb(0, 0, 0);
+  padding-top: 20px;
 }
 
 .card-image img {
-    height: 100%;
-    width: 100%;
-    transition: all 0.5s ease;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease;
 }
 
-
-.middle-card-main:hover .card-image{
-    scale: 0.95;
+.middle-card-main:hover .card-image {
+  scale: 0.95;
 }
 
 .middle-card-main:hover img {
-    scale: 1.2;
+  scale: 1.2;
 }

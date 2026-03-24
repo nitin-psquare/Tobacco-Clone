@@ -1,5 +1,3 @@
-
-
 .upper {
   height: 100vh;
   width: 100%;
@@ -26,7 +24,7 @@
 
 .text {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -35,21 +33,18 @@
   /* color: #d4b830; */
   -webkit-text-stroke: 1px #d4b830;
 
-  
-  font-family: "Bebas Neue" ;
-  
+  font-family: "Bebas Neue";
+
   font-size: 250px;
   font-weight: 400;
   letter-spacing: 2px;
-
-  /* Stop the text from blocking your spotlight hover effects */
   pointer-events: none;
   color: transparent;
 }
 
 .text-filled {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -57,9 +52,8 @@
   line-height: 0.9;
   color: #d4b830;
 
-  
   font-family: "Bebas Neue";
-  
+
   font-size: 250px;
   font-weight: 400;
   letter-spacing: 2px;
@@ -75,4 +69,23 @@
   height: 100%;
   pointer-events: none;
   z-index: 2;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.cursor-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
