@@ -24,7 +24,7 @@
 
 .text {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -38,15 +38,13 @@
   font-size: 250px;
   font-weight: 400;
   letter-spacing: 2px;
-
-  /* Stop the text from blocking your spotlight hover effects */
   pointer-events: none;
   color: transparent;
 }
 
 .text-filled {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;

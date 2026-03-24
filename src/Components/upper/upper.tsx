@@ -73,7 +73,7 @@ const Upper = () => {
       .some((t) => t.vars.radius);
     if (!isRadiusAnimating) {
       gsap.to(spotlightRef.current, {
-        radius: 350,
+        radius: 450,
         duration: 3,
         ease: "power3.out",
         onUpdate: updateSize,

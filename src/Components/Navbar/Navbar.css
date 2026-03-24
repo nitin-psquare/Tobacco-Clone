@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap");
+
+.navbar {
+  position: fixed;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 460px;
+  height: 55px;
+  pointer-events: auto;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  padding: 0 16px;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.nav-center .logo {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  color: #5d3a54;
+  line-height: 1;
+}
+
+.menu-txt,
+.lang-text {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #5d3a54;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.lang-text {
+  margin-right: 4px;
+}
+
+.icon {
+  font-size: 20px;
+  color: #821a68;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-box {
+  width: 15px;
+  height: 12px;
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-box .line {
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: #821a68;
+  border-radius: 9999px;
+  transition: transform 0.3s ease;
+}
+
+.hamburger-box .top {
+  transform: translateY(-5px);
+}
+
+.hamburger-box .bottom {
+  transform: translateY(5px);
+}
+
+.hamburger-box:hover .line {
+  transform: scaleX(1.1);
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
