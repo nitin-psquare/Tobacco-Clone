@@ -1,6 +1,19 @@
 import React from 'react'
 import cardimage from "../../assets/cardimage.png"
+import img1 from "../../assets/img1.jpg"
 
+import img2 from "../../assets/img2.jpg";
+import img3 from "../../assets/img3.jpg";
+import img4 from "../../assets/img4.jpg";
+import img5 from "../../assets/img5.jpg";
+import img6 from "../../assets/img6.jpg";
+import img7 from "../../assets/img7.jpg";
+import img8 from "../../assets/img8.jpg";
+import img9 from "../../assets/img9.png";
+import img10 from "../../assets/img10.jpg";
+import img11 from "../../assets/img11.jpg";
+import img12 from "../../assets/img12.jpg";
+import img13 from "../../assets/img13.jpg";
 import "./Middle2.css"
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
@@ -32,7 +45,7 @@ const Middle2 = () => {
           start: "top top",
           end: "bottom top",
           scrub: true,
-          markers: true
+          // markers: true
         }
       }, "collective");
 
@@ -74,28 +87,28 @@ const Middle2 = () => {
 
         </span>
       <div className="images-grid-container">
-        <div className='item' style={{ "--r": 1, "--c": 4 } as React.CSSProperties}>
-          <img src={cardimage} alt="" /></div>
-        <div className='item' style={{ "--r": 1, "--c": 1 } as React.CSSProperties}>
-          <img src={cardimage} alt="" /></div>
-        <div className='item' style={{ "--r": 2, "--c": 3 } as React.CSSProperties}>
-          <img src={cardimage} alt="" /></div>
-        <div className='item' style={{ "--r": 2, "--c": 2 } as React.CSSProperties}>
-          <img src={cardimage} alt="" /></div>
-        <div className='item' style={{ "--r": 4, "--c": 3 } as React.CSSProperties}>
-          <img src={cardimage} alt="" /></div>
-        <div className='item' style={{ "--r": 4, "--c": 2 } as React.CSSProperties}>
-          <img src={cardimage} alt="" /></div>
-        <div className='item' style={{ "--r": 5, "--c": 1 } as React.CSSProperties}>
-          <img src={cardimage} alt="" /></div>
-        <div className='item' style={{ "--r": 5, "--c": 4 } as React.CSSProperties}>
-          <img src={cardimage} alt="" /></div>
-        <div className='item' style={{ "--r": 6, "--c": 1 } as React.CSSProperties}>
-          <img src={cardimage} alt="" /></div>
-        <div className='item' style={{ "--r": 6, "--c": 3 } as React.CSSProperties}>
-          <img src={cardimage} alt="" /></div>
-        <div className='item' style={{ "--r": 9, "--c": 2 } as React.CSSProperties}>
-          <img src={cardimage} alt="" /></div>
+        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 1, "--c": 1 } as React.CSSProperties}>
+          <img src={img1} alt="" /></div>
+        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 1, "--c": 4 } as React.CSSProperties}>
+          <img src={img2} alt="" /></div>
+        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 3, "--c": 3 } as React.CSSProperties}>
+          <img src={img3} alt="" /></div>
+        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 3, "--c": 1 } as React.CSSProperties}>
+          <img src={img4} alt="" /></div>
+        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 5, "--c": 3 } as React.CSSProperties}>
+          <img src={img5} alt="" /></div>
+        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 6, "--c": 3 } as React.CSSProperties}>
+          <img src={img6} alt="" /></div>
+        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 8, "--c": 1 } as React.CSSProperties}>
+          <img src={img7} alt="" /></div>
+        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 11, "--c": 4 } as React.CSSProperties}>
+          <img src={img8} alt="" /></div>
+        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 13, "--c": 1 } as React.CSSProperties}>
+          <img src={img9} alt="" /></div>
+        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 15, "--c": 3 } as React.CSSProperties}>
+          <img src={img10} alt="" /></div>
+        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 17, "--c": 2 } as React.CSSProperties}>
+          <img src={img11} alt="" /></div>
 
       </div>
 
