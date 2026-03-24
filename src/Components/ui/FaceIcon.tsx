@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect } from "react";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
 
 
@@ -53,7 +53,7 @@ export default function FaceIcon() {
     });
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const side = sideRef.current;
     setPositionFromSide(side);
   }, []);
