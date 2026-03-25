@@ -9,6 +9,7 @@
   background-color: beige;
   overflow: hidden;
   transition: all 0.5s ease;
+  
 }
 .card-title {
   /* background-color: yellow; */
@@ -32,6 +33,7 @@
   height: 100%;
   width: 100%;
   transition: all 0.5s ease;
+  object-fit: cover;
 }
 
 .middle-card-main:hover .card-image {

@@ -1,5 +1,4 @@
 import React from 'react'
-import cardimage from "../../assets/cardimage.png"
 import img1 from "../../assets/img1.jpg"
 
 import img2 from "../../assets/img2.jpg";
@@ -12,8 +11,7 @@ import img8 from "../../assets/img8.jpg";
 import img9 from "../../assets/img9.png";
 import img10 from "../../assets/img10.jpg";
 import img11 from "../../assets/img11.jpg";
-import img12 from "../../assets/img12.jpg";
-import img13 from "../../assets/img13.jpg";
+
 import "./Middle2.css"
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
@@ -87,7 +85,7 @@ const Middle2 = () => {
 
         </span>
       <div className="images-grid-container">
-        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 1, "--c": 1 } as React.CSSProperties}>
+        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 1, "--c": 1  } as React.CSSProperties}>
           <img src={img1} alt="" /></div>
         <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 1, "--c": 4 } as React.CSSProperties}>
           <img src={img2} alt="" /></div>
@@ -97,7 +95,7 @@ const Middle2 = () => {
           <img src={img4} alt="" /></div>
         <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 5, "--c": 3 } as React.CSSProperties}>
           <img src={img5} alt="" /></div>
-        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 6, "--c": 3 } as React.CSSProperties}>
+        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 6, "--c": 2 } as React.CSSProperties}>
           <img src={img6} alt="" /></div>
         <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 8, "--c": 1 } as React.CSSProperties}>
           <img src={img7} alt="" /></div>

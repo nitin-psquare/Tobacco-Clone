@@ -55,8 +55,8 @@
     grid-row: var(--r);
     grid-column: var(--c);
     z-index: var(--z);
-
-
+    transform: translateY(calc(var(--z) * 70px));
+    
 }
 
 .middle2-heading {

@@ -74,7 +74,6 @@
   height: 2px;
   background-color: #821a68;
   border-radius: 9999px;
-  transition: transform 0.3s ease;
 }
 
 .hamburger-box .top {
@@ -85,10 +84,26 @@
   transform: translateY(5px);
 }
 
-.hamburger-box:hover .line {
-  transform: scaleX(1.1);
-}
-
 .icon:hover {
   transform: scale(1.1);
+}
+
+.menu-txt-wrapper {
+  position: relative;
+  height: 20px;
+  width: 55px;
+  overflow: hidden;
+  display: flex;
+}
+
+.menu-open {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.menu-close {
+  position: absolute;
+  top: 20px;
+  left: 0;
 }

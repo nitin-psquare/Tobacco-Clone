@@ -89,7 +89,7 @@ const Upper = () => {
     }
   };
 
-  const handleMouseLeave = (e: React.MouseEvent) => {
+  const handleMouseLeave = () => {
     if (show) return;
 
     gsap.to(spotlightRef.current, {
@@ -209,13 +209,13 @@ const Upper = () => {
       />
       <h1 className="text" ref={outlintTextRef}>
         {splitText("TOBACCO", "tobacco-char")} <br />
-        {splitText("THEATRE", "theatre-char")}
+        {splitText("THEATER", "theatre-char")}
       </h1>
 
       <div className="text-mask-container" ref={textRef}>
         <h1 className="text-filled">
           {splitText("TOBACCO", "tobacco-filled-char")} <br />
-          {splitText("THEATRE", "theatre-filled-char")}
+          {splitText("THEATER", "theatre-filled-char")}
         </h1>
       </div>
     </div>

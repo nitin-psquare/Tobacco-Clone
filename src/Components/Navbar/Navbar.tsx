@@ -1,15 +1,91 @@
+import { useRef, useState } from "react";
 import "./Navbar.css";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      if (isOpen) {
+        gsap.to(".top", {
+          y: 0,
+          rotation: 45,
+          duration: 0.3,
+          ease: "power2.inOut",
+        });
+        gsap.to(".mid", {
+          opacity: 0,
+          scaleX: 0,
+          duration: 0.3,
+          ease: "power2.inOut",
+        });
+        gsap.to(".bottom", {
+          y: 0,
+          rotation: -45,
+          duration: 0.3,
+          ease: "power2.inOut",
+        });
+
+        gsap.to(".menu-open", {
+          y: -20,
+          duration: 0.3,
+          ease: "power2.inOut",
+        });
+        gsap.to(".menu-close", {
+          y: -20,
+          duration: 0.3,
+          ease: "power2.inOut",
+        });
+      } else {
+        gsap.to(".top", {
+          y: -5,
+          rotation: 0,
+          duration: 0.3,
+          ease: "power2.inOut",
+        });
+        gsap.to(".mid", {
+          opacity: 1,
+          scaleX: 1,
+          duration: 0.3,
+          ease: "power2.inOut",
+        });
+        gsap.to(".bottom", {
+          y: 5,
+          rotation: 0,
+          duration: 0.3,
+          ease: "power2.inOut",
+        });
+
+        gsap.to(".menu-open", {
+          y: 0,
+          duration: 0.3,
+          ease: "power2.inOut",
+        });
+        gsap.to(".menu-close", {
+          y: 0,
+          duration: 0.3,
+          ease: "power2.inOut",
+        });
+      }
+    },
+    { scope: containerRef, dependencies: [isOpen] },
+  );
+
   return (
-    <nav className="navbar">
+    <nav className="navbar" ref={containerRef}>
       <div className="nav-left">
-        <div className="hamburger-box">
+        <div className="hamburger-box" onClick={() => setIsOpen(!isOpen)}>
           <div className="top line"></div>
           <div className="mid line"></div>
           <div className="bottom line"></div>
         </div>
-        <span className="menu-txt">MENU</span>
+        <span className="menu-txt-wrapper">
+          <span className="menu-txt menu-open">MENU</span>
+          <span className="menu-txt menu-close">CLOSE</span>
+        </span>
       </div>
 
       <div className="nav-center">
