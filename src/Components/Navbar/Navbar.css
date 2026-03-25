@@ -28,6 +28,15 @@
   cursor: pointer;
 }
 
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .nav-center .logo {
   font-family: "Bebas Neue", sans-serif;
   font-size: 32px;
