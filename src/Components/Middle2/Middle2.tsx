@@ -85,7 +85,7 @@ const Middle2 = () => {
 
         </span>
       <div className="images-grid-container">
-        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 1, "--c": 1 } as React.CSSProperties}>
+        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 1, "--c": 1  } as React.CSSProperties}>
           <img src={img1} alt="" /></div>
         <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 1, "--c": 4 } as React.CSSProperties}>
           <img src={img2} alt="" /></div>
@@ -95,7 +95,7 @@ const Middle2 = () => {
           <img src={img4} alt="" /></div>
         <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 5, "--c": 3 } as React.CSSProperties}>
           <img src={img5} alt="" /></div>
-        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 6, "--c": 3 } as React.CSSProperties}>
+        <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 6, "--c": 2 } as React.CSSProperties}>
           <img src={img6} alt="" /></div>
         <div className='item' style={{ "--z": Math.floor(Math.random()*(7) + 0) , "--r": 8, "--c": 1 } as React.CSSProperties}>
           <img src={img7} alt="" /></div>
