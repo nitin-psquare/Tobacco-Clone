@@ -16,8 +16,8 @@ const App = () => {
       duration: 3,
     });
 
-    lenis.on("scroll", (e) => {
-      // console.log(e);
+    lenis.on("scroll", (e:any) => {
+      console.log(e);
     });
   }, []);
 

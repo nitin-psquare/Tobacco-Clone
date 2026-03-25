@@ -89,7 +89,7 @@ const Upper = () => {
     }
   };
 
-  const handleMouseLeave = (e: React.MouseEvent) => {
+  const handleMouseLeave = () => {
     if (show) return;
 
     gsap.to(spotlightRef.current, {
