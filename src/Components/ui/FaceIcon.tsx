@@ -11,7 +11,7 @@ export default function FaceIcon() {
   const PEEK = 40;
 
   const setPositionFromSide = (side: number) => {
-    const element = logoRef.current;
+    const element = logoRef.current
     if (!element) return;
 
     const width = window.innerWidth;

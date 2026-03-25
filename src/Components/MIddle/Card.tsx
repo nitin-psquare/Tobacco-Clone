@@ -1,5 +1,4 @@
 import "./Card.css";
-import cardimage from "../../assets/cardimage.png";
 
 const Card = ({src}: {src: string}) => {
   return (

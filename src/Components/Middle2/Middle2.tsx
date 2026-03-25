@@ -1,5 +1,4 @@
 import React from 'react'
-import cardimage from "../../assets/cardimage.png"
 import img1 from "../../assets/img1.jpg"
 
 import img2 from "../../assets/img2.jpg";
@@ -12,8 +11,7 @@ import img8 from "../../assets/img8.jpg";
 import img9 from "../../assets/img9.png";
 import img10 from "../../assets/img10.jpg";
 import img11 from "../../assets/img11.jpg";
-import img12 from "../../assets/img12.jpg";
-import img13 from "../../assets/img13.jpg";
+
 import "./Middle2.css"
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
