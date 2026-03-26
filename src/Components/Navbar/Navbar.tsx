@@ -10,7 +10,6 @@ export default function Navbar() {
 
   useGSAP(
     () => {
-      // Menu Animations
       if (isOpen) {
         gsap.to(".top", {
           y: 0,
