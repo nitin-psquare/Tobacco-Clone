@@ -28,7 +28,7 @@ const scrollRef = useRef<HTMLDivElement | null>(null);
     });
 
     lenis.on("scroll", (e:any) => {
-      console.log(e);
+      // console.log(e);
     });
   }, []);
 
