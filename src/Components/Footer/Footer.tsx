@@ -1,4 +1,4 @@
-import "./footer.css";
+import "./Footer.css";
 const brandWords = "TOBACCO".split("");
 
 const Footer = () => {
