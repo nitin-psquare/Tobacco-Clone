@@ -80,7 +80,7 @@ const Upper = () => {
         onComplete: () => {
           gsap.to(spotlightRef.current, {
             radius: 250,
-            duration: 3,
+            duration: 2,
             ease: "power3.inOut",
             onUpdate: updateSize,
           });

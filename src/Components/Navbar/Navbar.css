@@ -28,6 +28,15 @@
   cursor: pointer;
 }
 
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .nav-center .logo {
   font-family: "Bebas Neue", sans-serif;
   font-size: 32px;
@@ -106,4 +115,96 @@
   position: absolute;
   top: 20px;
   left: 0;
+}
+
+.top-right {
+  position: fixed;
+  top: 10px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.pill {
+  background-color: #ffffff;
+  color: #5d3a54;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  height: 44px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  transition: scale 0.16s ease-in-out;
+}
+
+.pill-text-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 24px;
+}
+
+.pill-text-bottom {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.circle {
+  background-color: #fff;
+  color: #5d3a54;
+  font-size: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: scale 0.16s ease-in-out;
+}
+
+.circle-icon-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.circle-icon-bottom {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-right:hover .circle {
+  transform: scale(1.1);
+}
+
+.top-right:hover .pill {
+  transform: scale(1.1);
 }
