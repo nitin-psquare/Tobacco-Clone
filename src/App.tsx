@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { ReactLenis } from "lenis/react";
-import LandingPage from "./Components/LandingPage";
+import LandingPage from "./Components/Home/LandingPage";
 import "./App.css";
 import { useEffect, useRef } from "react";
 import Lenis from "lenis";
@@ -9,7 +9,7 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 import VenueRental from "./Components/VenueRental/VenueRental";
 
 const App = () => {
-const scrollRef = useRef<HTMLDivElement | null>(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const scroll = new LocomotiveScroll({
