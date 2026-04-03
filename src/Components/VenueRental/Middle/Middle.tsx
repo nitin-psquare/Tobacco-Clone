@@ -17,7 +17,10 @@ import img11 from "../../../assets/img11.jpg";
 import Cursorpreview from './Cursorpreview'
 const MIddle = () => {
 
-    const [hoveredRoom, sethoveredRoom] = useState<{ image: string } | null>(null);
+    const [hoveredRoom, sethoveredRoom] = useState<{ previous: string | null; current: string | null }>({
+        previous: null, 
+        current: null
+    });
     const [position, setposition] = useState<{
         x: number,
         y: number
@@ -64,7 +67,13 @@ const MIddle = () => {
                     </span>
                 </div>
 
-                <div className="v-r-roomslist">
+                <div className="v-r-roomslist"
+                    onMouseLeave={() => {
+                        sethoveredRoom({
+                            previous: null, current: null
+                        })
+                    }}
+                >
                     <RoomList sethoveredRoom = {sethoveredRoom} img = {img}/>
                     <RoomList sethoveredRoom = {sethoveredRoom} img = {img1}/>
                     <RoomList sethoveredRoom = {sethoveredRoom} img = {img2}/>

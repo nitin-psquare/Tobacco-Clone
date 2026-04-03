@@ -1,11 +1,16 @@
 import type { Dispatch } from "react";
 import "./RoomList.css"
-const RoomList = ({sethoveredRoom, img} : {sethoveredRoom: Dispatch<React.SetStateAction<{image: string;} | null>>, img: string} ) => {
+const RoomList = ({sethoveredRoom, img} : {sethoveredRoom: Dispatch<React.SetStateAction<{previous: string | null; current:string | null}>>, img: string} ) => {
   return (
     <div className="v-r-room"
         
-    onMouseEnter={() => sethoveredRoom({image:img})}
-    onMouseLeave={() => sethoveredRoom(null)}
+    onMouseEnter={() => {
+        sethoveredRoom((prev)=>({
+                previous: prev?.current ?? null,
+                current: img
+        }))
+    }}
+    
     >
         
         <div className="roomname">

@@ -3,10 +3,10 @@ import "./Cursorpreview.css"
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
-const Cursorpreview = ({ hoveredRoom, position }: { hoveredRoom: { image: string } | null, position: { x: number, y: number } }) => {
-
+const Cursorpreview = ({ hoveredRoom, position }: { hoveredRoom: { previous: string | null, current: string | null } | null, position: { x: number, y: number } }) => {
     const ref = useRef<HTMLDivElement>(null)
-
+    const previousref = useRef<HTMLImageElement>(null)
+    const currentRef = useRef<HTMLImageElement>(null) 
     useGSAP(() => {
         if (!ref.current) return;
         gsap.to(".cursor-preview", {
@@ -17,41 +17,52 @@ const Cursorpreview = ({ hoveredRoom, position }: { hoveredRoom: { image: string
 
 
     useGSAP(() => {
-        if (!ref.current) return;
+        if (!ref.current || !currentRef.current) return;
+
+
         
         const origin = Math.random() > 0.5
             ? "bottom left"
             : "bottom right";
 
         
-        gsap.set(ref.current, {
+        gsap.set(currentRef.current, {
             transformOrigin: origin,
         });
        
         gsap.fromTo(
-            ref.current,
+            currentRef.current,
             { scale: 0 },
             {
                 scale: 1,
-                duration: 0.4,
+                duration: 0.8,
                 ease: "power3.out",
             }
         );
-    }, [hoveredRoom?.image]);
+    }, [hoveredRoom?.current]);
 
 
-    
-    if (!hoveredRoom) return;
+
+    if (! hoveredRoom?.current) return;
 
     return (
         <div className='cursor-preview'
             ref={ref}
         >
+            {
+                hoveredRoom.previous && (
+                    <img src={hoveredRoom.previous} alt=""
+                        ref={previousref}
+                        className='cursor-preview-image previous'
+                    />
 
-            <img src={hoveredRoom.image} alt=""
-
-                className='cursor-preview-image'
-            />
+                )
+            } {
+                hoveredRoom.current && (<img src={hoveredRoom.current} alt=""
+                        ref={currentRef}
+                        className='cursor-preview-image current'
+                    />)
+            }
 
 
 
