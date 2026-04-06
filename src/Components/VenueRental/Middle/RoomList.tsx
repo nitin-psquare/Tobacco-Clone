@@ -20,7 +20,7 @@ const RoomList = ({sethoveredRoom, img} : {sethoveredRoom: Dispatch<React.SetSta
          y: gsap.getProperty(overlay, "y") ,
         }, {
                 y: fromTop ? "-100%": "100%" ,
-                duration: 0.25
+                duration: 0.3
         })
     }}
 
@@ -51,7 +51,7 @@ const RoomList = ({sethoveredRoom, img} : {sethoveredRoom: Dispatch<React.SetSta
          y: gsap.getProperty(overlay, "y") ,
         }, {
                 y: "0%", 
-                duration: 0.25, 
+                duration: 0.3, 
                 ease: "power1" 
         })
 
