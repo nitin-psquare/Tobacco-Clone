@@ -199,13 +199,11 @@ export default function Navbar() {
             </span>
           </li>
           <li className="menu-panel-item">
+            <span className="menu-item-num">02</span>
             <Link
               to="/venue-rental"
-              style={{
-                textDecoration: "none",
-              }}
+              style={{ textDecoration: "none", color: "inherit" }}
             >
-              <span className="menu-item-num">02</span>
               <span className="menu-item-text-wrap">
                 <span className="menu-item-text">BOOK THIS VENUE</span>
                 <span className="menu-item-text">BOOK THIS VENUE</span>
