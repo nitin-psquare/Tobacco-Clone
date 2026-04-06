@@ -32,7 +32,7 @@ const App = () => {
     const lenis = new Lenis({
       autoRaf: true,
       duration: 3,
-      wheelMultiplier: 0.3,
+      wheelMultiplier: 0.6,
     });
 
     lenis.on("scroll", () => {
