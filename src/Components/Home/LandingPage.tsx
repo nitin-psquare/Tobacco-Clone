@@ -3,13 +3,11 @@ import Curtain from "../../common/curtain";
 import MIddle from "./MIddle/MIddle";
 import Middle2 from "./Middle2/Middle2";
 import FaceIcon from "./ui/FaceIcon";
-import Navbar from "../Navbar/Navbar";
 import Footer from "./Footer/Footer";
 
 const LandingPage = () => {
   return (
     <div>
-      <Navbar />
       <Curtain />
       <div className="upper">
         <Upper />

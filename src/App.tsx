@@ -7,6 +7,7 @@ import Lenis from "lenis";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import VenueRental from "./Components/VenueRental/VenueRental";
+import Navbar from "./Components/Navbar/Navbar";
 
 const App = () => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
@@ -37,6 +38,7 @@ const App = () => {
   return (
     <div data-scroll-container ref={scrollRef}>
       <ReactLenis root />
+      <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/venue-rental" element={<VenueRental />} />
