@@ -10,8 +10,9 @@ const Cursorpreview = ({ hoveredRoom, position }: { hoveredRoom: { previous: str
     useGSAP(() => {
         if (!ref.current) return;
         gsap.to(".cursor-preview", {
-            x: position.x + 1,
-            y: position.y - 260
+            top: position.y - 260,
+            left: position.x + 1,
+            
         })
     }, [position])
 
