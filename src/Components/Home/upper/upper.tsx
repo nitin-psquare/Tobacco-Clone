@@ -12,6 +12,7 @@ const Upper = () => {
   const [show, setShow] = useState(false);
 
   const updateSize = () => {
+    if (!imageRef.current || !textRef.current) return;
     const { x, y, radius } = spotlightRef.current;
     const mask = `radial-gradient(circle ${radius}px at ${x}px ${y}px, black 40%, transparent 100%)`;
     gsap.set([imageRef.current, textRef.current], {

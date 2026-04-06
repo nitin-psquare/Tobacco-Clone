@@ -1,12 +1,18 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./Navbar.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
 
   useGSAP(
     () => {
@@ -112,7 +118,9 @@ export default function Navbar() {
         </div>
 
         <div className="nav-center">
-          <span className="logo">TOBACCO</span>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <span className="logo">TOBACCO</span>
+          </Link>
         </div>
 
         <div className="nav-right">
@@ -191,11 +199,18 @@ export default function Navbar() {
             </span>
           </li>
           <li className="menu-panel-item">
-            <span className="menu-item-num">02</span>
-            <span className="menu-item-text-wrap">
-              <span className="menu-item-text">BOOK THIS VENUE</span>
-              <span className="menu-item-text">BOOK THIS VENUE</span>
-            </span>
+            <Link
+              to="/venue-rental"
+              style={{
+                textDecoration: "none",
+              }}
+            >
+              <span className="menu-item-num">02</span>
+              <span className="menu-item-text-wrap">
+                <span className="menu-item-text">BOOK THIS VENUE</span>
+                <span className="menu-item-text">BOOK THIS VENUE</span>
+              </span>
+            </Link>
           </li>
           <li className="menu-panel-item">
             <span className="menu-item-num">03</span>

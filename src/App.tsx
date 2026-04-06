@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { ReactLenis } from "lenis/react";
 import LandingPage from "./Components/Home/LandingPage";
 import "./App.css";
@@ -11,6 +11,11 @@ import Navbar from "./Components/Navbar/Navbar";
 
 const App = () => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   useEffect(() => {
     const scroll = new LocomotiveScroll({

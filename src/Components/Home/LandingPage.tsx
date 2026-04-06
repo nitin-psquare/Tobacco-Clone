@@ -8,7 +8,7 @@ import Footer from "./Footer/Footer";
 const LandingPage = () => {
   return (
     <div>
-      <Curtain />
+      <Curtain key="home" />
       <div className="upper">
         <Upper />
       </div>
