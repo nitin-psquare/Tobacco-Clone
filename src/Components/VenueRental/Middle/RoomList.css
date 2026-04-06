@@ -6,9 +6,11 @@
     padding: 0px 120px;
     padding-right: 380px;    
     display: flex;
+    position :relative;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid black;
+    overflow: hidden;
 }
 .roomname {
     font-family: "Bebas Neue Pro" ;
@@ -16,6 +18,7 @@ font-size: 38px;
 font-weight: 900;
 line-height: 32.3px;
 color: rgb(0, 0, 0);
+z-index: 5;
 }
 
 .room-capacity {
@@ -24,6 +27,7 @@ color: rgb(0, 0, 0);
     font-weight: 400;
     line-height: 19px;
     color: rgb(0, 0, 0);
+    z-index: 5;
 }
 .room-area {
     font-family: Helvetica; 
@@ -31,4 +35,13 @@ color: rgb(0, 0, 0);
     font-weight: 400;
     line-height: 19px;
     color: rgb(0, 0, 0);
+    z-index: 5;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: yellow;
+    z-index: 3;
+    transform: translateY(-100%); 
 }
