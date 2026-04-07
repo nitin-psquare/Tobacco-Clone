@@ -4,7 +4,7 @@ import { useRef } from "react";
 import "./curtain.css";
 import { createPortal } from "react-dom";
 
-export default function Curtain({ keyProp }: { keyProp?: string }) {
+export default function Curtain() {
   const container = useRef<HTMLDivElement>(null);
 
   useGSAP(

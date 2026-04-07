@@ -31,10 +31,10 @@ const RoomList = ({sethoveredRoom, img} : {sethoveredRoom: Dispatch<React.SetSta
                 previous: prev?.current ?? null,
                 current: img
         }))
-        const parent = e.currentTarget.getBoundingClientRect() ;
+        // const parent = e.currentTarget.getBoundingClientRect() ;
          const overlay = e.currentTarget.querySelector(".overlay") ;
 
-        const fromTop = (e.clientY - parent.top < parent.height/ 2) ;
+        // const fromTop = (e.clientY - parent.top < parent.height/ 2) ;
 
         // gsap.set(overlay, {
         //         y: fromTop ? "-100%" : "100%"

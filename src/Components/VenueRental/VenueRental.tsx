@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import MIddle from "./Middle/Middle";
 import Curtain from "../../common/curtain";
 import Upper from "./upper/upper";

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import "./Middle.css"
 import RoomList from './RoomList'
 import img from "../../../assets/img10.jpg"
