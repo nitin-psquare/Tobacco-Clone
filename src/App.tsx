@@ -1,48 +1,57 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { ReactLenis } from "lenis/react";
 import LandingPage from "./Components/Home/LandingPage";
 import "./App.css";
 import { useEffect, useRef } from "react";
 import Lenis from "lenis";
-import LocomotiveScroll from "locomotive-scroll";
-import "locomotive-scroll/dist/locomotive-scroll.css";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import VenueRental from "./Components/VenueRental/VenueRental";
 import Navbar from "./Components/Navbar/Navbar";
 
 const App = () => {
-  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const lenisRef = useRef<Lenis | null>(null);
   const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    lenisRef.current?.scrollTo(0, { immediate: true });
+    ScrollTrigger.refresh();
   }, [location.pathname]);
 
   useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: scrollRef.current as HTMLElement,
-      smooth: true,
-    } as any);
+    gsap.registerPlugin(ScrollTrigger);
+
+    const lenis = new Lenis({
+      duration: 1.2,
+      lerp: 0.08,
+      smoothWheel: true,
+      wheelMultiplier: 0.85,
+      touchMultiplier: 1.2,
+    });
+    lenisRef.current = lenis;
+
+    const onLenisScroll = () => {
+      ScrollTrigger.update();
+    };
+
+    const onTick = (time: number) => {
+      lenis.raf(time * 1000);
+    };
+
+    lenis.on("scroll", onLenisScroll);
+    gsap.ticker.add(onTick);
+    gsap.ticker.lagSmoothing(0);
+    requestAnimationFrame(() => ScrollTrigger.refresh());
 
     return () => {
-      if (scroll) scroll.destroy();
+      lenis.off("scroll", onLenisScroll);
+      gsap.ticker.remove(onTick);
+      lenis.destroy();
+      lenisRef.current = null;
     };
   }, []);
 
-  useEffect(() => {
-    const lenis = new Lenis({
-      autoRaf: true,
-      duration: 3,
-      wheelMultiplier: 0.6,
-    });
-
-    lenis.on("scroll", () => {
-      // console.log(e);
-    });
-  }, []);
-
   return (
-    <div data-scroll-container ref={scrollRef}>
-      <ReactLenis root />
+    <div className="app-scroll-root">
       <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />

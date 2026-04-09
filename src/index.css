@@ -6,3 +6,27 @@
 *::-webkit-scrollbar {
 	display: none;
 }
+
+html,
+body,
+#root {
+	width: 100%;
+	min-height: 100%;
+}
+
+html.lenis,
+html.lenis body {
+	height: auto;
+}
+
+.lenis.lenis-smooth {
+	scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+	overflow: hidden;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+	overscroll-behavior: contain;
+}
